@@ -10,6 +10,11 @@
 		460A57071C0E4CDF00367302 /* data.xml in Resources */ = {isa = PBXBuildFile; fileRef = 460A57061C0E4CDF00367302 /* data.xml */; };
 		460A57081C0E4CDF00367302 /* data.xml in Resources */ = {isa = PBXBuildFile; fileRef = 460A57061C0E4CDF00367302 /* data.xml */; };
 		460A57091C0E4CDF00367302 /* data.xml in Resources */ = {isa = PBXBuildFile; fileRef = 460A57061C0E4CDF00367302 /* data.xml */; };
+		460A570E1C0E52CA00367302 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46D3C4F81C0E4719000C7BA3 /* Main.storyboard */; };
+		460A570F1C0E52CB00367302 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46D3C4F81C0E4719000C7BA3 /* Main.storyboard */; };
+		460A57191C0E5D9E00367302 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A57181C0E5D9E00367302 /* SearchTableViewController.swift */; };
+		460A571A1C0E5D9E00367302 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A57181C0E5D9E00367302 /* SearchTableViewController.swift */; };
+		460A571B1C0E5D9E00367302 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A57181C0E5D9E00367302 /* SearchTableViewController.swift */; };
 		46D3C4F31C0E4719000C7BA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D3C4F21C0E4719000C7BA3 /* AppDelegate.swift */; };
 		46D3C4F51C0E4719000C7BA3 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D3C4F41C0E4719000C7BA3 /* MasterViewController.swift */; };
 		46D3C4F71C0E4719000C7BA3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D3C4F61C0E4719000C7BA3 /* DetailViewController.swift */; };
@@ -39,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		460A57061C0E4CDF00367302 /* data.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = data.xml; sourceTree = "<group>"; };
+		460A57181C0E5D9E00367302 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		46D3C4EF1C0E4719000C7BA3 /* Titanic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Titanic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46D3C4F21C0E4719000C7BA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46D3C4F41C0E4719000C7BA3 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +113,7 @@
 				46D3C4F41C0E4719000C7BA3 /* MasterViewController.swift */,
 				46D3C4F61C0E4719000C7BA3 /* DetailViewController.swift */,
 				46D3C4F81C0E4719000C7BA3 /* Main.storyboard */,
+				460A57181C0E5D9E00367302 /* SearchTableViewController.swift */,
 				46D3C4FB1C0E4719000C7BA3 /* Assets.xcassets */,
 				46D3C4FD1C0E4719000C7BA3 /* LaunchScreen.storyboard */,
 				46D3C5001C0E4719000C7BA3 /* Info.plist */,
@@ -249,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				460A57081C0E4CDF00367302 /* data.xml in Resources */,
+				460A570E1C0E52CA00367302 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				460A57091C0E4CDF00367302 /* data.xml in Resources */,
+				460A570F1C0E52CB00367302 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +279,7 @@
 				46D3C4F71C0E4719000C7BA3 /* DetailViewController.swift in Sources */,
 				46D3C4F51C0E4719000C7BA3 /* MasterViewController.swift in Sources */,
 				46D3C4F31C0E4719000C7BA3 /* AppDelegate.swift in Sources */,
+				460A57191C0E5D9E00367302 /* SearchTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46D3C50A1C0E4719000C7BA3 /* TitanicTests.swift in Sources */,
+				460A571A1C0E5D9E00367302 /* SearchTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46D3C5151C0E4719000C7BA3 /* TitanicUITests.swift in Sources */,
+				460A571B1C0E5D9E00367302 /* SearchTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
