@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document>
+<passengers>
    <passenger id="1">
       <name>Braund, Mr. Owen Harris</name>
       <sex>male</sex>
@@ -11583,4 +11583,4 @@
       <cabin />
       <embarked>Q</embarked>
    </passenger>
-</document>
+</passengers>
