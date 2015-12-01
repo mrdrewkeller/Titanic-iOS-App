@@ -2,8 +2,8 @@
 //  DetailViewController.swift
 //  Titanic
 //
-//  Created by Drew Keller on 12/1/15.
-//  Copyright © 2015 Drew Keller. All rights reserved.
+//  Created by Drew Keller AND TRAVIS on 12/1/15.
+//  Copyright © 2015 Drew Keller AND ALSO TRAVIS. All rights reserved.
 //
 
 import UIKit

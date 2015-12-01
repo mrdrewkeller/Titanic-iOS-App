@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		131BCDF31C0E51DC00D2CE57 /* XMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131BCDF21C0E51DC00D2CE57 /* XMLParser.swift */; };
+		131BCDFB1C0E5DEB00D2CE57 /* Passenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131BCDFA1C0E5DEB00D2CE57 /* Passenger.swift */; };
 		460A57071C0E4CDF00367302 /* data.xml in Resources */ = {isa = PBXBuildFile; fileRef = 460A57061C0E4CDF00367302 /* data.xml */; };
 		460A57081C0E4CDF00367302 /* data.xml in Resources */ = {isa = PBXBuildFile; fileRef = 460A57061C0E4CDF00367302 /* data.xml */; };
 		460A57091C0E4CDF00367302 /* data.xml in Resources */ = {isa = PBXBuildFile; fileRef = 460A57061C0E4CDF00367302 /* data.xml */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		131BCDF21C0E51DC00D2CE57 /* XMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMLParser.swift; sourceTree = "<group>"; };
+		131BCDFA1C0E5DEB00D2CE57 /* Passenger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Passenger.swift; path = Titanic/Passenger.swift; sourceTree = "<group>"; };
 		460A57061C0E4CDF00367302 /* data.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = data.xml; sourceTree = "<group>"; };
 		46D3C4EF1C0E4719000C7BA3 /* Titanic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Titanic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46D3C4F21C0E4719000C7BA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +87,7 @@
 		46D3C4E61C0E4719000C7BA3 = {
 			isa = PBXGroup;
 			children = (
+				131BCDFA1C0E5DEB00D2CE57 /* Passenger.swift */,
 				46D3C4F11C0E4719000C7BA3 /* Titanic */,
 				46D3C5081C0E4719000C7BA3 /* TitanicTests */,
 				46D3C5131C0E4719000C7BA3 /* TitanicUITests */,
@@ -111,6 +116,7 @@
 				46D3C4FD1C0E4719000C7BA3 /* LaunchScreen.storyboard */,
 				46D3C5001C0E4719000C7BA3 /* Info.plist */,
 				460A57061C0E4CDF00367302 /* data.xml */,
+				131BCDF21C0E51DC00D2CE57 /* XMLParser.swift */,
 			);
 			path = Titanic;
 			sourceTree = "<group>";
@@ -267,7 +273,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				131BCDF31C0E51DC00D2CE57 /* XMLParser.swift in Sources */,
 				46D3C4F71C0E4719000C7BA3 /* DetailViewController.swift in Sources */,
+				131BCDFB1C0E5DEB00D2CE57 /* Passenger.swift in Sources */,
 				46D3C4F51C0E4719000C7BA3 /* MasterViewController.swift in Sources */,
 				46D3C4F31C0E4719000C7BA3 /* AppDelegate.swift in Sources */,
 			);
