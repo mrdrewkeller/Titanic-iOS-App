@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		460A57071C0E4CDF00367302 /* data.xml in Resources */ = {isa = PBXBuildFile; fileRef = 460A57061C0E4CDF00367302 /* data.xml */; };
+		460A57081C0E4CDF00367302 /* data.xml in Resources */ = {isa = PBXBuildFile; fileRef = 460A57061C0E4CDF00367302 /* data.xml */; };
+		460A57091C0E4CDF00367302 /* data.xml in Resources */ = {isa = PBXBuildFile; fileRef = 460A57061C0E4CDF00367302 /* data.xml */; };
 		46D3C4F31C0E4719000C7BA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D3C4F21C0E4719000C7BA3 /* AppDelegate.swift */; };
 		46D3C4F51C0E4719000C7BA3 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D3C4F41C0E4719000C7BA3 /* MasterViewController.swift */; };
 		46D3C4F71C0E4719000C7BA3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D3C4F61C0E4719000C7BA3 /* DetailViewController.swift */; };
@@ -35,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		460A57061C0E4CDF00367302 /* data.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = data.xml; sourceTree = "<group>"; };
 		46D3C4EF1C0E4719000C7BA3 /* Titanic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Titanic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46D3C4F21C0E4719000C7BA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46D3C4F41C0E4719000C7BA3 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +110,7 @@
 				46D3C4FB1C0E4719000C7BA3 /* Assets.xcassets */,
 				46D3C4FD1C0E4719000C7BA3 /* LaunchScreen.storyboard */,
 				46D3C5001C0E4719000C7BA3 /* Info.plist */,
+				460A57061C0E4CDF00367302 /* data.xml */,
 			);
 			path = Titanic;
 			sourceTree = "<group>";
@@ -233,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46D3C4FF1C0E4719000C7BA3 /* LaunchScreen.storyboard in Resources */,
+				460A57071C0E4CDF00367302 /* data.xml in Resources */,
 				46D3C4FC1C0E4719000C7BA3 /* Assets.xcassets in Resources */,
 				46D3C4FA1C0E4719000C7BA3 /* Main.storyboard in Resources */,
 			);
@@ -242,6 +248,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				460A57081C0E4CDF00367302 /* data.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +256,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				460A57091C0E4CDF00367302 /* data.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +496,7 @@
 				46D3C51B1C0E4719000C7BA3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		46D3C51C1C0E4719000C7BA3 /* Build configuration list for PBXNativeTarget "TitanicTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +505,7 @@
 				46D3C51E1C0E4719000C7BA3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		46D3C51F1C0E4719000C7BA3 /* Build configuration list for PBXNativeTarget "TitanicUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +514,7 @@
 				46D3C5211C0E4719000C7BA3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
