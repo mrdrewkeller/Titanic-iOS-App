@@ -12,6 +12,9 @@ class MasterViewController: UITableViewController {
 
     var detailViewController: DetailViewController? = nil
     var objects = [AnyObject]()
+    
+    var dataFile : String = "data.xml";
+    var passengers : [Passenger]!;
 
 
     override func viewDidLoad() {
@@ -22,6 +25,13 @@ class MasterViewController: UITableViewController {
             let controllers = split.viewControllers
             self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
         }
+        
+        // Read data from XML
+        let data : NSData = NSData(contentsOfFile: dataFile)!;
+        let parser : XMLParser = XMLParser();
+        parser.doParse(data);
+        passengers = parser.getPassengers();
+
     }
 
     override func viewWillAppear(animated: Bool) {
