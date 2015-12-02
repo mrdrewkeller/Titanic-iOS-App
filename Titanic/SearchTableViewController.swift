@@ -10,6 +10,19 @@ import UIKit
 
 class SearchTableViewController: UITableViewController {
 
+    @IBOutlet weak var nameUITextField: UITextField!
+    
+    @IBOutlet weak var genderUISegmentedControl: UISegmentedControl!
+    
+    @IBOutlet weak var maxAgeUISlider: UISlider!
+    
+    @IBOutlet weak var minAgeUISlider: UISlider!
+    
+    @IBOutlet weak var searchUIButton: UIButton!
+    
+    @IBAction func searchAction(sender: AnyObject) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,6 +31,15 @@ class SearchTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        maxAgeUISlider.maximumValue = 100;
+        maxAgeUISlider.minimumValue = 1;
+        maxAgeUISlider.value = 100;
+        
+        minAgeUISlider.maximumValue = 99;
+        minAgeUISlider.minimumValue = 0;
+        minAgeUISlider.value = 0;
+        
     }
 
     override func didReceiveMemoryWarning() {
