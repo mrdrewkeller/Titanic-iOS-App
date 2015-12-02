@@ -2,8 +2,8 @@
 //  MasterViewController.swift
 //  Titanic
 //
-//  Created by Drew Keller on 12/1/15.
-//  Copyright © 2015 Drew Keller. All rights reserved.
+//  Created by Drew Keller AND TRAVIS on 12/1/15.
+//  Copyright © 2015 Drew Keller AND ALSO TRAVIS. All rights reserved.
 //
 
 import UIKit
@@ -12,6 +12,10 @@ class MasterViewController: UITableViewController {
 
     var detailViewController: DetailViewController? = nil
     var objects = [AnyObject]()
+    var passengers : [Passenger]!;
+    
+    // data file
+    let path = NSBundle.mainBundle().pathForResource("data", ofType: "xml")
 
 
     override func viewDidLoad() {
@@ -22,6 +26,14 @@ class MasterViewController: UITableViewController {
             let controllers = split.viewControllers
             self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
         }
+        
+        // Read data from XML URL
+        let url = NSURL(fileURLWithPath: path!);
+        
+        let parser : XMLParser = XMLParser();
+        parser.parseFileWithURL(url);
+        passengers = parser.getPassengers();
+        print("data file not found.");
     }
 
     override func viewWillAppear(animated: Bool) {
