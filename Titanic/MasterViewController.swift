@@ -12,9 +12,10 @@ class MasterViewController: UITableViewController {
 
     var detailViewController: DetailViewController? = nil
     var objects = [AnyObject]()
-    
-    var dataFile : String = "data.xml";
     var passengers : [Passenger]!;
+    
+    // data file
+    let path = NSBundle.mainBundle().pathForResource("data", ofType: "xml")
 
 
     override func viewDidLoad() {
@@ -26,12 +27,13 @@ class MasterViewController: UITableViewController {
             self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
         }
         
-        // Read data from XML
-        let data : NSData = NSData(contentsOfFile: dataFile)!;
+        // Read data from XML URL
+        let url = NSURL(fileURLWithPath: path!);
+        
         let parser : XMLParser = XMLParser();
-        parser.doParse(data);
+        parser.parseFileWithURL(url);
         passengers = parser.getPassengers();
-
+        print("data file not found.");
     }
 
     override func viewWillAppear(animated: Bool) {

@@ -19,8 +19,8 @@ class XMLParser: NSObject, NSXMLParserDelegate {
         passengers = [Passenger]( );
     }
     
-    func doParse(data: NSData) {
-        let nsXMLParser : NSXMLParser = NSXMLParser(data: data);
+    func parseFileWithURL(url: NSURL) {
+        let nsXMLParser : NSXMLParser = NSXMLParser(contentsOfURL: url)!;
         nsXMLParser.delegate = self;
         
         let success : Bool = nsXMLParser.parse();

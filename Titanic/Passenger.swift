@@ -16,10 +16,10 @@ class Passenger: NSObject {
     var pclass : Int = 0;
     var sibsp : Int = 0;
     var parch : Int = 0;
-    var ticket : String? = "";
-    var fare : Double? = 0;
-    var cabin : String? = "";
-    var embarked : String? = "";
+    var ticket : String = "";
+    var fare : Double = 0.0;
+    var cabin : String = "";
+    var embarked : String = "";
     
     func toString() -> String {
         return ""; // TODO
