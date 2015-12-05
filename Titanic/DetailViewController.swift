@@ -47,6 +47,21 @@ class DetailViewController: UIViewController {
                 label.text = detail.description
             }
         }
+        self.title = passengers[row].name;
+        if (passengers[row].survived) {
+            self.survivedLabel.text = "Survived";
+        } else {
+            self.survivedLabel.text = "Died";
+        }
+        self.sexLabel.text = passengers[row].sex
+        self.ageLabel.text = "\(passengers[row].age)"
+        self.sibspLabel.text = "\(passengers[row].sibsp)"
+        self.parchLabel.text = "\(passengers[row].parch)"
+        self.classLabel.text = "\(passengers[row].pclass)"
+        self.ticketLabel.text = passengers[row].ticket
+        self.fareLabel.text = "\(passengers[row].fare)"
+        self.cabinLabel.text = passengers[row].cabin
+        self.embarkedLabel.text = passengers[row].embarked
     }
 
     override func viewDidLoad() {
