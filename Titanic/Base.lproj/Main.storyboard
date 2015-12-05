@@ -210,6 +210,18 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Titanic Passenger" id="mOI-FS-AaM"/>
+                    <connections>
+                        <outlet property="ageLabel" destination="o92-vQ-u9j" id="2HL-El-qFD"/>
+                        <outlet property="cabinLabel" destination="ABy-jM-cbq" id="8J9-9n-Cub"/>
+                        <outlet property="classLabel" destination="W4U-RQ-n6Z" id="S99-fY-Khv"/>
+                        <outlet property="embarkedLabel" destination="hdK-fO-Gfh" id="aAN-zz-nQL"/>
+                        <outlet property="fareLabel" destination="RwO-cf-tUv" id="3QN-jN-cGC"/>
+                        <outlet property="parchLabel" destination="Xbi-4D-P8z" id="Fs7-KB-QqV"/>
+                        <outlet property="sexLabel" destination="CKl-sE-iZ1" id="MeZ-2f-2Gc"/>
+                        <outlet property="sibspLabel" destination="0Wv-4E-xlY" id="Z9n-gB-bFW"/>
+                        <outlet property="survivedLabel" destination="Bmw-1x-IQi" id="xxm-bu-M5n"/>
+                        <outlet property="ticketLabel" destination="ho5-iV-Ljy" id="VcB-wp-0aJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
             </objects>
@@ -447,7 +459,7 @@
                             <outlet property="delegate" destination="7bK-jq-Zjz" id="RA6-mI-bju"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Master" id="Zdf-7t-Un8"/>
+                    <navigationItem key="navigationItem" title="Titanic" id="Zdf-7t-Un8"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
             </objects>
@@ -471,6 +483,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Tll-UG-LXB"/>
+        <segue reference="6S0-TO-JiA"/>
     </inferredMetricsTieBreakers>
 </document>

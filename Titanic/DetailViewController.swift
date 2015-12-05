@@ -11,6 +11,16 @@ import UIKit
 class DetailViewController: UIViewController {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
+    @IBOutlet weak var survivedLabel: UILabel!
+    @IBOutlet weak var sexLabel: UILabel!
+    @IBOutlet weak var ageLabel: UILabel!
+    @IBOutlet weak var sibspLabel: UILabel!
+    @IBOutlet weak var parchLabel: UILabel!
+    @IBOutlet weak var classLabel: UILabel!
+    @IBOutlet weak var ticketLabel: UILabel!
+    @IBOutlet weak var fareLabel: UILabel!
+    @IBOutlet weak var cabinLabel: UILabel!
+    @IBOutlet weak var embarkedLabel: UILabel!
     
 
 
