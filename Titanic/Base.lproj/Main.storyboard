@@ -292,6 +292,18 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Titanic Passenger" id="mOI-FS-AaM"/>
+                    <connections>
+                        <outlet property="ageLabel" destination="Fw2-Du-EfU" id="YPc-WM-Pc5"/>
+                        <outlet property="cabinLabel" destination="aw3-IF-wdU" id="Gop-sm-dri"/>
+                        <outlet property="classLabel" destination="qdQ-VF-Cn1" id="i6y-wq-iQx"/>
+                        <outlet property="embarkedLabel" destination="lS7-xK-VEE" id="Ggp-3G-1xj"/>
+                        <outlet property="fareLabel" destination="5Aj-8h-vl8" id="QCR-KT-wJe"/>
+                        <outlet property="parchLabel" destination="W3U-Hf-4BR" id="au1-7Z-5R4"/>
+                        <outlet property="sexLabel" destination="U1z-b5-uge" id="Lap-yg-0dE"/>
+                        <outlet property="sibspLabel" destination="GUv-J6-v1h" id="B61-9M-vuN"/>
+                        <outlet property="survivedLabel" destination="2wp-Qy-haA" id="hDF-Ve-Jrh"/>
+                        <outlet property="ticketLabel" destination="1s7-z1-DCG" id="fTS-DA-Iiw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
             </objects>
