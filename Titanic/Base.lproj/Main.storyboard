@@ -317,9 +317,12 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="8UT-PB-2xU">
+                                                <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="1" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="8UT-PB-2xU">
                                                     <rect key="frame" x="6" y="7" width="588" height="31"/>
                                                     <animations/>
+                                                    <connections>
+                                                        <action selector="maxAgeChanged:" destination="oFT-hp-Y5x" eventType="valueChanged" id="BvU-OV-9Z6"/>
+                                                    </connections>
                                                 </slider>
                                             </subviews>
                                             <animations/>
@@ -334,16 +337,43 @@
                                             <constraint firstItem="8UT-PB-2xU" firstAttribute="height" secondItem="y7g-Z4-vsy" secondAttribute="height" id="xD6-kM-j0N"/>
                                         </constraints>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Min Age" id="4xl-RH-uLd">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Max Age Value" id="rmu-x4-VzF">
                                         <rect key="frame" x="0.0" y="281.5" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rmu-x4-VzF" id="bbg-kp-vi7">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Max Age Value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nOp-YL-GSy">
+                                                    <rect key="frame" x="8" y="0.0" width="584" height="43.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="nOp-YL-GSy" secondAttribute="bottom" id="0mS-vB-u6D"/>
+                                                <constraint firstItem="nOp-YL-GSy" firstAttribute="top" secondItem="bbg-kp-vi7" secondAttribute="top" id="1Vw-Zb-hwz"/>
+                                                <constraint firstItem="nOp-YL-GSy" firstAttribute="width" secondItem="bbg-kp-vi7" secondAttribute="width" id="K4r-Vs-qDV"/>
+                                                <constraint firstAttribute="trailing" secondItem="nOp-YL-GSy" secondAttribute="trailing" id="TgJ-Ni-k83"/>
+                                                <constraint firstItem="nOp-YL-GSy" firstAttribute="leading" secondItem="bbg-kp-vi7" secondAttribute="leading" id="VCu-XB-7ab"/>
+                                                <constraint firstItem="nOp-YL-GSy" firstAttribute="height" secondItem="bbg-kp-vi7" secondAttribute="height" id="mD4-vC-Exd"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Min Age" id="4xl-RH-uLd">
+                                        <rect key="frame" x="0.0" y="325.5" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4xl-RH-uLd" id="CQA-dy-POY">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Fo8-tU-krI">
+                                                <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Fo8-tU-krI">
                                                     <rect key="frame" x="6" y="5" width="588" height="31"/>
                                                     <animations/>
+                                                    <connections>
+                                                        <action selector="minAgeChanged:" destination="oFT-hp-Y5x" eventType="valueChanged" id="rKR-Ab-Z9s"/>
+                                                    </connections>
                                                 </slider>
                                             </subviews>
                                             <animations/>
@@ -358,12 +388,36 @@
                                             <constraint firstItem="Fo8-tU-krI" firstAttribute="leading" secondItem="4xl-RH-uLd" secondAttribute="leading" id="jS1-8N-bQ0"/>
                                         </constraints>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Min Age Value" id="9yb-46-XJ6">
+                                        <rect key="frame" x="0.0" y="369.5" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9yb-46-XJ6" id="Xxf-Kg-ZdC">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Min Age Value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYN-yh-fLV">
+                                                    <rect key="frame" x="8" y="0.0" width="584" height="43.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="bYN-yh-fLV" firstAttribute="top" secondItem="Xxf-Kg-ZdC" secondAttribute="top" id="LdP-hu-RmU"/>
+                                                <constraint firstItem="bYN-yh-fLV" firstAttribute="leading" secondItem="Xxf-Kg-ZdC" secondAttribute="leading" id="PN1-5F-qqi"/>
+                                                <constraint firstAttribute="trailing" secondItem="bYN-yh-fLV" secondAttribute="trailing" id="Uwj-ak-8eI"/>
+                                                <constraint firstAttribute="bottom" secondItem="bYN-yh-fLV" secondAttribute="bottom" id="bNn-2o-vzm"/>
+                                                <constraint firstItem="bYN-yh-fLV" firstAttribute="height" secondItem="Xxf-Kg-ZdC" secondAttribute="height" id="lHi-3M-Zyc"/>
+                                                <constraint firstItem="bYN-yh-fLV" firstAttribute="width" secondItem="Xxf-Kg-ZdC" secondAttribute="width" id="xxh-xd-42o"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection id="rZd-Cd-Ozr">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="NxV-wG-yU6">
-                                        <rect key="frame" x="0.0" y="361.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="449.5" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NxV-wG-yU6" id="ooR-rM-0wj">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -402,7 +456,9 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="genderUISegmentedControl" destination="0ct-wa-kD8" id="gzf-Sg-wE2"/>
+                        <outlet property="maxAgeLabel" destination="nOp-YL-GSy" id="r9y-Rr-p3v"/>
                         <outlet property="maxAgeUISlider" destination="8UT-PB-2xU" id="ygK-TV-gUj"/>
+                        <outlet property="minAgeLabel" destination="bYN-yh-fLV" id="tk1-wG-vsI"/>
                         <outlet property="minAgeUISlider" destination="Fo8-tU-krI" id="gg5-ez-3HU"/>
                         <outlet property="nameUITextField" destination="SJ9-EV-jz4" id="k5Y-BX-Wwv"/>
                         <outlet property="searchUIButton" destination="PRQ-bb-yI0" id="OuY-47-b7b"/>
