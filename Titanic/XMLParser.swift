@@ -42,6 +42,7 @@ class XMLParser: NSObject, NSXMLParserDelegate {
     </document>
     */
     
+    // find openning tags
     func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
         // start a new Passenger object
         print("start element:" + elementName + "\n", terminator: "");
@@ -50,6 +51,7 @@ class XMLParser: NSObject, NSXMLParserDelegate {
         }
     }
     
+    // find closing tags & set values for passengers
     func parser(parser: NSXMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
         print("end element: " + elementName + "\n", terminator: "")
         switch elementName {
@@ -64,6 +66,7 @@ class XMLParser: NSObject, NSXMLParserDelegate {
         }
     }
     
+    // find tag content
     func parser(parser: NSXMLParser, foundCharacters string: String) {
         // found characters
         print( "found characters: " + string + "\n", terminator: "")

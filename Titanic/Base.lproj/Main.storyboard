@@ -346,11 +346,13 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Max Age Value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nOp-YL-GSy">
                                                     <rect key="frame" x="8" y="0.0" width="584" height="43.5"/>
+                                                    <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <animations/>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="nOp-YL-GSy" secondAttribute="bottom" id="0mS-vB-u6D"/>
                                                 <constraint firstItem="nOp-YL-GSy" firstAttribute="top" secondItem="bbg-kp-vi7" secondAttribute="top" id="1Vw-Zb-hwz"/>
@@ -360,6 +362,7 @@
                                                 <constraint firstItem="nOp-YL-GSy" firstAttribute="height" secondItem="bbg-kp-vi7" secondAttribute="height" id="mD4-vC-Exd"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <animations/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Min Age" id="4xl-RH-uLd">
                                         <rect key="frame" x="0.0" y="325.5" width="600" height="44"/>
@@ -397,11 +400,13 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Min Age Value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYN-yh-fLV">
                                                     <rect key="frame" x="8" y="0.0" width="584" height="43.5"/>
+                                                    <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <animations/>
                                             <constraints>
                                                 <constraint firstItem="bYN-yh-fLV" firstAttribute="top" secondItem="Xxf-Kg-ZdC" secondAttribute="top" id="LdP-hu-RmU"/>
                                                 <constraint firstItem="bYN-yh-fLV" firstAttribute="leading" secondItem="Xxf-Kg-ZdC" secondAttribute="leading" id="PN1-5F-qqi"/>
@@ -411,6 +416,7 @@
                                                 <constraint firstItem="bYN-yh-fLV" firstAttribute="width" secondItem="Xxf-Kg-ZdC" secondAttribute="width" id="xxh-xd-42o"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <animations/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
