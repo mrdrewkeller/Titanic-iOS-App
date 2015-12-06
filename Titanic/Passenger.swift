@@ -25,4 +25,6 @@ class Passenger: NSObject {
         return ""; // TODO
     }
     
+    // passenger data is read in by parser (see XMLParser.swift)
+    
 }

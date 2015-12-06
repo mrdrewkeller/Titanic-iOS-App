@@ -12,7 +12,7 @@ import UIKit
 infix operator =~ {associativity left precedence 130}
 
 // define the RegEx operator:
-// syntax:  "Word" =~ "[A-Z]\w+" // -> true
+// syntax:  "Word" =~ "^[A-Z]\w+" // -> true
 func =~ (left: String, right: String) -> Bool {
     return Regex(right).test(left);
 }
@@ -42,8 +42,38 @@ class MasterViewController: UITableViewController {
         let parser : XMLParser = XMLParser();
         parser.parseFileWithURL(url);
         passengers = parser.getPassengers();
-        print("data file not found.");
         
+        
+        // test searching & alphabetizing
+        //passengers = sortPassengers(searchPassengersByGender(searchPassengersByAgeRange(passengers, minAge: 0, maxAge: 1), gender: "male"));
+        
+    }
+    
+    
+    func searchPassengersByRegex(array: [Passenger], nameRegex: String) -> [Passenger]{
+        let result = array.filter({
+            $0.name =~ nameRegex
+            })
+        return result;
+    }
+    func searchPassengersByAgeRange(array: [Passenger], minAge: Double, maxAge: Double) -> [Passenger]{
+        let result = array.filter({
+            ($0.age > minAge) && ($0.age < maxAge);
+        })
+        return result;
+    }
+    func searchPassengersByGender(array: [Passenger], gender: String) -> [Passenger] {
+        let result = array.filter({
+            $0.sex == gender
+            })
+        return result
+    }
+    
+    // alphabetize passengers
+    func sortPassengers(passengers: [Passenger] = []) -> [Passenger] {
+        return passengers.sort({
+          $0.name < $1.name
+        });
     }
     
     override func viewWillAppear(animated: Bool) {
