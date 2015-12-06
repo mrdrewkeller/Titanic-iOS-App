@@ -8,6 +8,15 @@
 
 import UIKit
 
+// create the RegEx infix operator
+infix operator =~ {associativity left precedence 130}
+
+// define the RegEx operator:
+// syntax:  "Word" =~ "[A-Z]\w+" // -> true
+func =~ (left: String, right: String) -> Bool {
+    return Regex(right).test(left);
+}
+
 class MasterViewController: UITableViewController {
     
     var detailViewController: DetailViewController? = nil
@@ -16,7 +25,7 @@ class MasterViewController: UITableViewController {
     
     // data file
     let path = NSBundle.mainBundle().pathForResource("data", ofType: "xml")
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +43,7 @@ class MasterViewController: UITableViewController {
         parser.parseFileWithURL(url);
         passengers = parser.getPassengers();
         print("data file not found.");
+        
     }
     
     override func viewWillAppear(animated: Bool) {
