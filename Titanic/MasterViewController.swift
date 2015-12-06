@@ -14,14 +14,16 @@ class MasterViewController: UITableViewController {
     var objects = [AnyObject]()
     var passengers : [Passenger]!;
     
-    // data file
-    let path = NSBundle.mainBundle().pathForResource("data", ofType: "xml")
-    
     var value : Int = 0;
     
     func updateValue( d : Int ) {
         value = d;
     }
+    
+    let stvc = SearchTableViewController()
+    
+    // data file
+    let path = NSBundle.mainBundle().pathForResource("data", ofType: "xml")
     
     
     override func viewDidLoad() {
@@ -41,14 +43,11 @@ class MasterViewController: UITableViewController {
         passengers = parser.getPassengers();
         print("data file not found.");
         
-
     }
     
     @IBAction func goSearch(sender: AnyObject) {
         
         let stvc : SearchTableViewController = self.storyboard?.instantiateViewControllerWithIdentifier( "stvc" ) as! SearchTableViewController;
-        
-        stvc.updateValue( value );
         
         stvc.modalTransitionStyle = UIModalTransitionStyle.CoverVertical;
         
