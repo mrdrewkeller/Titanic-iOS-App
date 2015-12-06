@@ -65,7 +65,8 @@ class MasterViewController: UITableViewController {
         return result;
     }
     func searchPassengersByAgeRange(array: [Passenger], age1: Double, age2: Double) -> [Passenger]{
-        var minAge, maxAge : Double;
+        // determine ends of range
+        var minAge, maxAge : Double
         if age1 > age2 {
             maxAge = age1
             minAge = age2
@@ -73,12 +74,21 @@ class MasterViewController: UITableViewController {
             maxAge = age2
             minAge = age1
         }
-        let result = array.filter({
-            ($0.age >= minAge) && ($0.age <= maxAge);
-        })
+        
+        var result : [Passenger];
+        if (minAge == 0 && maxAge == 100) { // not using age filter
+            return array;
+        } else {
+            result = array.filter({
+                ($0.age >= -1) && ($0.age <= maxAge);
+            })
+        }
         return result;
     }
     func searchPassengersByGender(array: [Passenger], gender: String) -> [Passenger] {
+        if gender == "" { // no gender specified by filter
+            return array;
+        }
         let result = array.filter({
             $0.sex == gender
             })
