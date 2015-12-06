@@ -23,6 +23,14 @@ class MasterViewController: UITableViewController {
     var objects = [AnyObject]()
     var passengers : [Passenger]!;
     
+    var value : Int = 0;
+    
+    func updateValue( d : Int ) {
+        value = d;
+    }
+    
+    let stvc = SearchTableViewController()
+    
     // data file
     let path = NSBundle.mainBundle().pathForResource("data", ofType: "xml")
 
@@ -42,7 +50,7 @@ class MasterViewController: UITableViewController {
         let parser : XMLParser = XMLParser();
         parser.parseFileWithURL(url);
         passengers = parser.getPassengers();
-        
+        print("data file not found.");
         
         // test searching & alphabetizing
         //passengers = sortPassengers(searchPassengersByGender(searchPassengersByAgeRange(passengers, minAge: 0, maxAge: 1), gender: "male"));
@@ -75,6 +83,16 @@ class MasterViewController: UITableViewController {
           $0.name < $1.name
         });
     }
+    
+    @IBAction func goSearch(sender: AnyObject) {
+        
+        let stvc : SearchTableViewController = self.storyboard?.instantiateViewControllerWithIdentifier( "stvc" ) as! SearchTableViewController;
+        
+        stvc.modalTransitionStyle = UIModalTransitionStyle.CoverVertical;
+        
+        self.presentViewController(stvc, animated: true, completion: nil);
+    }
+    
     
     override func viewWillAppear(animated: Bool) {
         self.clearsSelectionOnViewWillAppear = self.splitViewController!.collapsed

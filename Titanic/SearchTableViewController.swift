@@ -45,6 +45,8 @@ class SearchTableViewController: UITableViewController {
     }
     
     @IBAction func searchAction(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil );
+        
     }
     
     @IBAction func maxAgeChanged(sender: AnyObject) {
