@@ -50,7 +50,7 @@ class MasterViewController: UITableViewController {
         
         stvc.updateValue( value );
         
-        stvc.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal;
+        stvc.modalTransitionStyle = UIModalTransitionStyle.CoverVertical;
         
         self.presentViewController(stvc, animated: true, completion: nil);
     }

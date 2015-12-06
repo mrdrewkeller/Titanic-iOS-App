@@ -10,7 +10,7 @@ import UIKit
 
 class SearchTableViewController: UITableViewController {
     
-    var value : Int = 0;
+    var value : Int = 3;
     
     func updateValue( d : Int ) {
         value = d;
@@ -51,6 +51,8 @@ class SearchTableViewController: UITableViewController {
     }
     
     @IBAction func searchAction(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil );
+        
     }
     
     @IBAction func maxAgeChanged(sender: AnyObject) {
