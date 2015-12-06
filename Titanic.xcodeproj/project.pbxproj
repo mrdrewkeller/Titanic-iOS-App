@@ -18,6 +18,18 @@
 		460A57191C0E5D9E00367302 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A57181C0E5D9E00367302 /* SearchTableViewController.swift */; };
 		460A571A1C0E5D9E00367302 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A57181C0E5D9E00367302 /* SearchTableViewController.swift */; };
 		460A571B1C0E5D9E00367302 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A57181C0E5D9E00367302 /* SearchTableViewController.swift */; };
+		4685F2A21C14CAC100B7CB07 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D3C4F41C0E4719000C7BA3 /* MasterViewController.swift */; };
+		4685F2A31C14CAC200B7CB07 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D3C4F41C0E4719000C7BA3 /* MasterViewController.swift */; };
+		4685F2A41C14CAC600B7CB07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D3C4F21C0E4719000C7BA3 /* AppDelegate.swift */; };
+		4685F2A51C14CAC600B7CB07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D3C4F21C0E4719000C7BA3 /* AppDelegate.swift */; };
+		4685F2A61C14CB1900B7CB07 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D3C4F61C0E4719000C7BA3 /* DetailViewController.swift */; };
+		4685F2A71C14CB1900B7CB07 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D3C4F61C0E4719000C7BA3 /* DetailViewController.swift */; };
+		4685F2A81C14CB1C00B7CB07 /* XMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131BCDF21C0E51DC00D2CE57 /* XMLParser.swift */; };
+		4685F2A91C14CB1C00B7CB07 /* XMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131BCDF21C0E51DC00D2CE57 /* XMLParser.swift */; };
+		4685F2AA1C14CB3000B7CB07 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A8D6521C14A10900AC9E28 /* Regex.swift */; };
+		4685F2AB1C14CB3100B7CB07 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A8D6521C14A10900AC9E28 /* Regex.swift */; };
+		4685F2AC1C14CB4300B7CB07 /* Passenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131BCDFA1C0E5DEB00D2CE57 /* Passenger.swift */; };
+		4685F2AD1C14CB4400B7CB07 /* Passenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131BCDFA1C0E5DEB00D2CE57 /* Passenger.swift */; };
 		46D3C4F31C0E4719000C7BA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D3C4F21C0E4719000C7BA3 /* AppDelegate.swift */; };
 		46D3C4F51C0E4719000C7BA3 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D3C4F41C0E4719000C7BA3 /* MasterViewController.swift */; };
 		46D3C4F71C0E4719000C7BA3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D3C4F61C0E4719000C7BA3 /* DetailViewController.swift */; };
@@ -299,8 +311,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4685F2A41C14CAC600B7CB07 /* AppDelegate.swift in Sources */,
 				46D3C50A1C0E4719000C7BA3 /* TitanicTests.swift in Sources */,
+				4685F2AC1C14CB4300B7CB07 /* Passenger.swift in Sources */,
+				4685F2A91C14CB1C00B7CB07 /* XMLParser.swift in Sources */,
+				4685F2AA1C14CB3000B7CB07 /* Regex.swift in Sources */,
+				4685F2A71C14CB1900B7CB07 /* DetailViewController.swift in Sources */,
 				460A571A1C0E5D9E00367302 /* SearchTableViewController.swift in Sources */,
+				4685F2A21C14CAC100B7CB07 /* MasterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,8 +326,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4685F2A51C14CAC600B7CB07 /* AppDelegate.swift in Sources */,
 				46D3C5151C0E4719000C7BA3 /* TitanicUITests.swift in Sources */,
+				4685F2AD1C14CB4400B7CB07 /* Passenger.swift in Sources */,
+				4685F2A81C14CB1C00B7CB07 /* XMLParser.swift in Sources */,
+				4685F2AB1C14CB3100B7CB07 /* Regex.swift in Sources */,
+				4685F2A61C14CB1900B7CB07 /* DetailViewController.swift in Sources */,
 				460A571B1C0E5D9E00367302 /* SearchTableViewController.swift in Sources */,
+				4685F2A31C14CAC200B7CB07 /* MasterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

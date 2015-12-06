@@ -23,6 +23,9 @@ class SearchTableViewController: UITableViewController {
     @IBOutlet weak var maxAgeLabel: UILabel!
     @IBOutlet weak var minAgeLabel: UILabel!
     
+    
+    var customSearch : Int = 0;
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,17 +37,25 @@ class SearchTableViewController: UITableViewController {
         
         maxAgeUISlider.maximumValue = 100;
         maxAgeUISlider.minimumValue = 1;
-        maxAgeUISlider.value = 100;
+        maxAgeUISlider.value = 100.0;
         
         minAgeUISlider.maximumValue = 99;
         minAgeUISlider.minimumValue = 0;
-        minAgeUISlider.value = 0;
+        minAgeUISlider.value = 0.0;
         
         maxAgeLabel.text = "Maximum Age: 100";
         minAgeLabel.text = "Minimum Age: 0";
+        customSearch = 1;
     }
     
     @IBAction func searchAction(sender: AnyObject) {
+        let mvc = MasterViewController();
+        print ("FUCKCUFJFIUFJUFJFJFJ")
+        mvc.newMaxAge = Double (maxAgeUISlider.value)
+        mvc.newMinAge = Double (minAgeUISlider.value)
+        mvc.newCustomSearch = 1;
+        print (mvc.newMinAge)
+        mvc.viewDidLoad();
         self.dismissViewControllerAnimated(true, completion: nil );
         
     }

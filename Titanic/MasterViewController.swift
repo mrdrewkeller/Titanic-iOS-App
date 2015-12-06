@@ -23,16 +23,14 @@ class MasterViewController: UITableViewController {
     var objects = [AnyObject]()
     var passengers : [Passenger]!;
     
-    var value : Int = 0;
-    
-    func updateValue( d : Int ) {
-        value = d;
-    }
-    
     let stvc = SearchTableViewController()
     
     // data file
     let path = NSBundle.mainBundle().pathForResource("data", ofType: "xml")
+    
+    var newCustomSearch = 0;
+    var newMaxAge : Double = 100.0;
+    var newMinAge : Double = 0.0;
 
     
     override func viewDidLoad() {
@@ -53,7 +51,18 @@ class MasterViewController: UITableViewController {
         print("data file not found.");
         
         // test searching & alphabetizing
-        passengers = sortPassengers(searchPassengersByAgeRange(passengers, age1: 1, age2: 0));
+        
+        if (newCustomSearch == 0) {
+            passengers = sortPassengers(searchPassengersByAgeRange(passengers, age1: newMaxAge, age2: newMinAge));
+            print("AAAAAAAAAA")
+            print(newCustomSearch)
+        }
+        else if (newCustomSearch == 1) {
+            passengers = sortPassengers(searchPassengersByAgeRange(passengers, age1: newMaxAge, age2: newMinAge));
+            print("AAAAAAAAAA")
+            print(newCustomSearch)
+        }
+        
         
     }
     
@@ -131,8 +140,10 @@ class MasterViewController: UITableViewController {
                 
                 controller.setRow(indexPath.row);
                 controller.assignPassengers(passengers);
+                
             }
         }
+
     }
     
     // MARK: - Table View
