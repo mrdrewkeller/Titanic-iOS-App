@@ -22,12 +22,21 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var cabinLabel: UILabel!
     @IBOutlet weak var embarkedLabel: UILabel!
     
-
+    var row:Int!;
+    var passengers: [Passenger]!;
+    
+    func setRow(newRow: Int) {
+        row = newRow;
+    }
+    
+    func assignPassengers(newPassengers : [Passenger]) {
+        passengers = newPassengers;
+    }
 
     var detailItem: AnyObject? {
         didSet {
             // Update the view.
-            self.configureView()
+            //self.configureView()
         }
     }
 
