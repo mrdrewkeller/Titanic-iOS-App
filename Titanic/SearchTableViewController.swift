@@ -10,6 +10,12 @@ import UIKit
 
 class SearchTableViewController: UITableViewController {
     
+    var value : Int = 0;
+    
+    func updateValue( d : Int ) {
+        value = d;
+    }
+    
     @IBOutlet weak var nameUITextField: UITextField!
     
     @IBOutlet weak var genderUISegmentedControl: UISegmentedControl!

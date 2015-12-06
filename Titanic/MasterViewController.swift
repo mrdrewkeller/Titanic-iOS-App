@@ -17,6 +17,12 @@ class MasterViewController: UITableViewController {
     // data file
     let path = NSBundle.mainBundle().pathForResource("data", ofType: "xml")
     
+    var value : Int = 0;
+    
+    func updateValue( d : Int ) {
+        value = d;
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +40,21 @@ class MasterViewController: UITableViewController {
         parser.parseFileWithURL(url);
         passengers = parser.getPassengers();
         print("data file not found.");
+        
+
     }
+    
+    @IBAction func goSearch(sender: AnyObject) {
+        
+        let stvc : SearchTableViewController = self.storyboard?.instantiateViewControllerWithIdentifier( "stvc" ) as! SearchTableViewController;
+        
+        stvc.updateValue( value );
+        
+        stvc.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal;
+        
+        self.presentViewController(stvc, animated: true, completion: nil);
+    }
+    
     
     override func viewWillAppear(animated: Bool) {
         self.clearsSelectionOnViewWillAppear = self.splitViewController!.collapsed
