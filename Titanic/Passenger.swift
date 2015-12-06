@@ -11,13 +11,13 @@ import Foundation
 class Passenger: NSObject {
     var name : String = "";
     var sex : String = "";
-    var age : Double = 0.0;
+    var age : Double = -1; // treat unrecorded ages
     var survived : Bool = true; // optimistism
     var pclass : Int = 0;
     var sibsp : Int = 0;
     var parch : Int = 0;
     var ticket : String = "";
-    var fare : Double = 0.0;
+    var fare : Double = -1; // treat unrecorded fares
     var cabin : String = "";
     var embarked : String = "";
     

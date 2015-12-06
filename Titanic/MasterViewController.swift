@@ -53,7 +53,7 @@ class MasterViewController: UITableViewController {
         print("data file not found.");
         
         // test searching & alphabetizing
-        //passengers = sortPassengers(searchPassengersByGender(searchPassengersByAgeRange(passengers, minAge: 0, maxAge: 1), gender: "male"));
+        passengers = sortPassengers(searchPassengersByAgeRange(passengers, age1: 1, age2: 0));
         
     }
     
@@ -64,9 +64,17 @@ class MasterViewController: UITableViewController {
             })
         return result;
     }
-    func searchPassengersByAgeRange(array: [Passenger], minAge: Double, maxAge: Double) -> [Passenger]{
+    func searchPassengersByAgeRange(array: [Passenger], age1: Double, age2: Double) -> [Passenger]{
+        var minAge, maxAge : Double;
+        if age1 > age2 {
+            maxAge = age1
+            minAge = age2
+        } else {
+            maxAge = age2
+            minAge = age1
+        }
         let result = array.filter({
-            ($0.age > minAge) && ($0.age < maxAge);
+            ($0.age >= minAge) && ($0.age <= maxAge);
         })
         return result;
     }
