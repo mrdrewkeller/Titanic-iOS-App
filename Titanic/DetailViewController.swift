@@ -53,15 +53,15 @@ class DetailViewController: UIViewController {
         } else {
             self.survivedLabel.text = "Died";
         }
-        self.sexLabel.text = passengers[row].sex
-        self.ageLabel.text = "\(passengers[row].age)"
-        self.sibspLabel.text = "\(passengers[row].sibsp)"
-        self.parchLabel.text = "\(passengers[row].parch)"
-        self.classLabel.text = "\(passengers[row].pclass)"
-        self.ticketLabel.text = passengers[row].ticket
-        self.fareLabel.text = "\(passengers[row].fare)"
-        self.cabinLabel.text = passengers[row].cabin
-        self.embarkedLabel.text = passengers[row].embarked
+        self.sexLabel.text = "Sex: \(passengers[row].sex)"
+        self.ageLabel.text = "Age: \(passengers[row].age)"
+        self.sibspLabel.text = "Sibblings/Spouse: \(passengers[row].sibsp)"
+        self.parchLabel.text = "Parents/Children: \(passengers[row].parch)"
+        self.classLabel.text = "Class: \(passengers[row].pclass)"
+        self.ticketLabel.text = "Ticket: \(passengers[row].ticket)"
+        self.fareLabel.text = "Fare: \(passengers[row].fare)"
+        self.cabinLabel.text = "Cabin: \(passengers[row].cabin)"
+        self.embarkedLabel.text = "Embarked From: \(passengers[row].embarked)"
     }
 
     override func viewDidLoad() {
