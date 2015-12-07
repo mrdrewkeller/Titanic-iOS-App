@@ -29,9 +29,24 @@ class MasterViewController: UITableViewController {
     let path = NSBundle.mainBundle().pathForResource("data", ofType: "xml")
     
     var newCustomSearch = 0;
-    var newMaxAge : Double = 100.0;
+    var newMaxAge : Double = 0.0;
     var newMinAge : Double = 0.0;
-
+    var nameSearch : String = "Smith";
+    var newGender : String = "";
+    
+    func updateMinAge( d : Double ) {
+        newMinAge = d;
+    }
+    func updateMaxAge( d : Double ) {
+        newMaxAge = d;
+    }
+    func updateNameSearch( s : String ) {
+        nameSearch = s;
+    }
+    func updateGender( s : String ) {
+        newGender = s;
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,31 +65,46 @@ class MasterViewController: UITableViewController {
         passengers = parser.getPassengers();
         print("data file not found.");
         
+        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        
+        // Read data from XML URL
+        let url = NSURL(fileURLWithPath: path!);
+        
+        let parser : XMLParser = XMLParser();
+        parser.parseFileWithURL(url);
+        passengers = parser.getPassengers();
+        print("data file not found.");
+        
+        print ("INSIDE VIEW DID APPEAR")
+        
         // test searching & alphabetizing
         
-        if (newCustomSearch == 0) {
-            passengers = sortPassengers(searchPassengersByAgeRange(passengers, age1: newMaxAge, age2: newMinAge));
-            print("AAAAAAAAAA")
-            print(newCustomSearch)
-        }
-        else if (newCustomSearch == 1) {
-            passengers = sortPassengers(searchPassengersByAgeRange(passengers, age1: newMaxAge, age2: newMinAge));
-            print("AAAAAAAAAA")
-            print(newCustomSearch)
-        }
         
+        print("New Min Age")
+        print(self.newMinAge)
+        print("New Max Age")
+        print(self.newMaxAge)
+        passengers = sortPassengers(searchPassengersByAgeRange(passengers, age1: newMaxAge, age2: newMinAge));
+        //passengers = sortPassengers(searchPassengersByRegex(passengers, nameRegex: "Smith"))
         
+
     }
     
     
     func searchPassengersByRegex(array: [Passenger], nameRegex: String) -> [Passenger]{
         let result = array.filter({
             $0.name =~ nameRegex
-            })
+        })
         return result;
     }
     func searchPassengersByAgeRange(array: [Passenger], age1: Double, age2: Double) -> [Passenger]{
         var minAge, maxAge : Double;
+        print("INSIDE SEARCH PASSENGER BY AGE RANGE")
+        print(age1)
+        print(age2)
         if age1 > age2 {
             maxAge = age1
             minAge = age2
@@ -90,14 +120,14 @@ class MasterViewController: UITableViewController {
     func searchPassengersByGender(array: [Passenger], gender: String) -> [Passenger] {
         let result = array.filter({
             $0.sex == gender
-            })
+        })
         return result
     }
     
     // alphabetize passengers
     func sortPassengers(passengers: [Passenger] = []) -> [Passenger] {
         return passengers.sort({
-          $0.name < $1.name
+            $0.name < $1.name
         });
     }
     
@@ -112,8 +142,8 @@ class MasterViewController: UITableViewController {
     
     
     override func viewWillAppear(animated: Bool) {
-        self.clearsSelectionOnViewWillAppear = self.splitViewController!.collapsed
-        super.viewWillAppear(animated)
+        //self.clearsSelectionOnViewWillAppear = self.splitViewController!.collapsed
+        //super.viewWillAppear(animated)
     }
     
     override func didReceiveMemoryWarning() {
@@ -143,7 +173,7 @@ class MasterViewController: UITableViewController {
                 
             }
         }
-
+        
     }
     
     // MARK: - Table View

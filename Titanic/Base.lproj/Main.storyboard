@@ -9,7 +9,7 @@
         <!--Master-->
         <scene sceneID="pY4-Hu-kfo">
             <objects>
-                <navigationController storyboardIdentifier="mvc" title="Master" id="RMx-3f-FxP" sceneMemberID="viewController">
+                <navigationController title="Master" id="RMx-3f-FxP" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Pmd-2v-anx">
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
@@ -238,7 +238,7 @@
         <!--Search Table View Controller-->
         <scene sceneID="z5k-0h-f0l">
             <objects>
-                <tableViewController storyboardIdentifier="stvc" id="oFT-hp-Y5x" customClass="SearchTableViewController" customModule="Titanic" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="stvc" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oFT-hp-Y5x" customClass="SearchTableViewController" customModule="Titanic" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleAspectFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="osV-HL-Ebf">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -491,7 +491,7 @@
         <!--Master-->
         <scene sceneID="smW-Zh-WAh">
             <objects>
-                <tableViewController title="Master" clearsSelectionOnViewWillAppear="NO" id="7bK-jq-Zjz" customClass="MasterViewController" customModule="Titanic" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="mvc" title="Master" useStoryboardIdentifierAsRestorationIdentifier="YES" clearsSelectionOnViewWillAppear="NO" id="7bK-jq-Zjz" customClass="MasterViewController" customModule="Titanic" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="r7i-6Z-zg0">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

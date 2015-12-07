@@ -25,15 +25,20 @@ class SearchTableViewController: UITableViewController {
     
     
     var customSearch : Int = 0;
+    var newMinAge : Double = 1.0;
+    var newMaxAge : Double = 1.0;
+    var newNameSearch : String = "";
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        //self.clearsSelectionOnViewWillAppear = false
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        nameUITextField.text = "";
         
         maxAgeUISlider.maximumValue = 100;
         maxAgeUISlider.minimumValue = 1;
@@ -45,20 +50,38 @@ class SearchTableViewController: UITableViewController {
         
         maxAgeLabel.text = "Maximum Age: 100";
         minAgeLabel.text = "Minimum Age: 0";
-        customSearch = 1;
     }
     
     @IBAction func searchAction(sender: AnyObject) {
-        let mvc = MasterViewController();
-        print ("FUCKCUFJFIUFJUFJFJFJ")
-        mvc.newMaxAge = Double (maxAgeUISlider.value)
-        mvc.newMinAge = Double (minAgeUISlider.value)
-        mvc.newCustomSearch = 1;
-        print (mvc.newMinAge)
-        mvc.viewDidLoad();
-        self.dismissViewControllerAnimated(true, completion: nil );
+        //let mvc = MasterViewController();
+        //print ("INSIDE SEARCH ACTION")
+        self.newMaxAge = Double (maxAgeUISlider.value)
+        self.newMinAge = Double (minAgeUISlider.value)
+        self.newNameSearch = String (nameUITextField.text)
+        //mvc.newMinAge = self.newMinAge
+        //mvc.newMaxAge = self.newMaxAge
+        //mvc.newCustomSearch = 1;
+        //mvc.nameSearch = nameUITextField.text!;
+        //mvc.updateValue(self.newMinAge)
+        //print ("MVC NEW MIN AGE")
+        //print (mvc.newMinAge)
+        //print ("MVC NEW MAX AGE")
+        //print (mvc.newMaxAge)
+        //mvc.viewDidLoad();
+        //self.dismissViewControllerAnimated(true, completion: nil );
+        
+        let mvc : MasterViewController = self.storyboard?.instantiateViewControllerWithIdentifier( "mvc" ) as! MasterViewController;
+        
+        mvc.updateMinAge( self.newMinAge );
+        mvc.updateMaxAge( self.newMaxAge );
+        mvc.updateNameSearch(self.newNameSearch)
+        
+        mvc.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal;
+        
+        self.presentViewController(mvc, animated: true, completion: nil);
         
     }
+    
     
     @IBAction func maxAgeChanged(sender: AnyObject) {
         // round to nearest whole number
