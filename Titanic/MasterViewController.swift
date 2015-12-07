@@ -31,8 +31,8 @@ class MasterViewController: UITableViewController {
     var newCustomSearch = 0;
     var newMaxAge : Double = 0.0;
     var newMinAge : Double = 0.0;
-    var nameSearch : String = "Smith";
-    var newGender : String = "";
+    var nameSearch : String = ".*";
+    var newGender : String = "male";
     
     func updateMinAge( d : Double ) {
         newMinAge = d;
@@ -65,32 +65,15 @@ class MasterViewController: UITableViewController {
         passengers = parser.getPassengers();
         print("data file not found.");
         
-        
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        
-        // Read data from XML URL
-        let url = NSURL(fileURLWithPath: path!);
-        
-        let parser : XMLParser = XMLParser();
-        parser.parseFileWithURL(url);
-        passengers = parser.getPassengers();
-        print("data file not found.");
-        
-        print ("INSIDE VIEW DID APPEAR")
-        
-        // test searching & alphabetizing
-        
-        
         print("New Min Age")
         print(self.newMinAge)
         print("New Max Age")
         print(self.newMaxAge)
         passengers = sortPassengers(searchPassengersByAgeRange(passengers, age1: newMaxAge, age2: newMinAge));
-        //passengers = sortPassengers(searchPassengersByRegex(passengers, nameRegex: "Smith"))
+        //passengers = sortPassengers(searchPassengersByRegex(passengers, nameRegex: "Smith"));
+        passengers = sortPassengers(searchPassengersByRegex(searchPassengersByGender(searchPassengersByAgeRange(passengers, age1: newMaxAge, age2: newMinAge), gender: newGender), nameRegex: nameSearch ));
         
-
+        
     }
     
     

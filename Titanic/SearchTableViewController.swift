@@ -27,7 +27,8 @@ class SearchTableViewController: UITableViewController {
     var customSearch : Int = 0;
     var newMinAge : Double = 1.0;
     var newMaxAge : Double = 1.0;
-    var newNameSearch : String = "";
+    var newNameSearch : String! = "";
+    var newGender : String! = "";
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,7 +58,8 @@ class SearchTableViewController: UITableViewController {
         //print ("INSIDE SEARCH ACTION")
         self.newMaxAge = Double (maxAgeUISlider.value)
         self.newMinAge = Double (minAgeUISlider.value)
-        self.newNameSearch = String (nameUITextField.text)
+        self.newNameSearch = String! (nameUITextField.text)
+        self.newGender = String! (genderUISegmentedControl.titleForSegmentAtIndex(genderUISegmentedControl.selectedSegmentIndex))
         //mvc.newMinAge = self.newMinAge
         //mvc.newMaxAge = self.newMaxAge
         //mvc.newCustomSearch = 1;
@@ -75,6 +77,10 @@ class SearchTableViewController: UITableViewController {
         mvc.updateMinAge( self.newMinAge );
         mvc.updateMaxAge( self.newMaxAge );
         mvc.updateNameSearch(self.newNameSearch)
+        mvc.updateGender(self.newGender.lowercaseString);
+        print("GENDER")
+        print(self.newGender)
+        mvc.viewDidLoad();
         
         mvc.modalTransitionStyle = UIModalTransitionStyle.CoverVertical;
         
