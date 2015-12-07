@@ -74,6 +74,7 @@ class SearchTableViewController: UITableViewController {
         //self.dismissViewControllerAnimated(true, completion: nil );
         
         let mvc : MasterViewController = self.storyboard?.instantiateViewControllerWithIdentifier( "mvc" ) as! MasterViewController;
+        let appd = AppDelegate()
         
         mvc.updateMinAge( self.newMinAge );
         mvc.updateMaxAge( self.newMaxAge );

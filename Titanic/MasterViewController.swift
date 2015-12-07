@@ -23,16 +23,19 @@ class MasterViewController: UITableViewController {
     var objects = [AnyObject]()
     var passengers : [Passenger]!;
     
+    var loadedMView : Int = 0;
+    
+    
     let stvc = SearchTableViewController()
     
     // data file
     let path = NSBundle.mainBundle().pathForResource("data", ofType: "xml")
     
-    var newCustomSearch = 0;
-    var newMaxAge : Double = 0.0;
+    // default values
+    var newMaxAge : Double = 100.0;
     var newMinAge : Double = 0.0;
     var nameSearch : String = ".*";
-    var newGender : String = "male";
+    var newGender : String = "all";
     
     func updateMinAge( d : Double ) {
         newMinAge = d;
@@ -47,6 +50,8 @@ class MasterViewController: UITableViewController {
         newGender = s;
     }
     
+    @IBAction func bottomSearch(sender: AnyObject) {
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,14 +70,9 @@ class MasterViewController: UITableViewController {
         passengers = parser.getPassengers();
         print("data file not found.");
         
-        print("New Min Age")
-        print(self.newMinAge)
-        print("New Max Age")
-        print(self.newMaxAge)
-        passengers = sortPassengers(searchPassengersByAgeRange(passengers, age1: newMaxAge, age2: newMinAge));
-        //passengers = sortPassengers(searchPassengersByRegex(passengers, nameRegex: "Smith"));
         passengers = sortPassengers(searchPassengersByRegex(searchPassengersByGender(searchPassengersByAgeRange(passengers, age1: newMaxAge, age2: newMinAge), gender: newGender), nameRegex: nameSearch ));
         
+        self.navigationItem.setLeftBarButtonItem(UIBarButtonItem(barButtonSystemItem: .Search, target: self, action: "goSearch:"), animated: true)
         
     }
     
@@ -86,6 +86,7 @@ class MasterViewController: UITableViewController {
         })
         return result;
     }
+    
     func searchPassengersByAgeRange(array: [Passenger], age1: Double, age2: Double) -> [Passenger]{
         var minAge, maxAge : Double;
         print("INSIDE SEARCH PASSENGER BY AGE RANGE")
