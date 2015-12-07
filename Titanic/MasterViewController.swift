@@ -53,7 +53,8 @@ class MasterViewController: UITableViewController {
         print("data file not found.");
         
         // test searching & alphabetizing
-        passengers = sortPassengers(searchPassengersByAgeRange(passengers, age1: 1, age2: 0));
+        passengers = sortPassengers(searchPassengersByRegex(passengers, nameRegex: "i"));
+        //passengers = sortPassengers(searchPassengersByAgeRange(passengers, age1: 1, age2: 0));
         
     }
     
