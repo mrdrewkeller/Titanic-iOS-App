@@ -76,7 +76,7 @@ class SearchTableViewController: UITableViewController {
         mvc.updateMaxAge( self.newMaxAge );
         mvc.updateNameSearch(self.newNameSearch)
         
-        mvc.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal;
+        mvc.modalTransitionStyle = UIModalTransitionStyle.CoverVertical;
         
         self.presentViewController(mvc, animated: true, completion: nil);
         

@@ -39,7 +39,23 @@ class DetailViewController: UIViewController {
             //self.configureView()
         }
     }
+    
+    @IBAction func masterButton(sender: AnyObject) {
+        let mvc : MasterViewController = self.storyboard?.instantiateViewControllerWithIdentifier( "mvc" ) as! MasterViewController;
+        
+        mvc.modalTransitionStyle = UIModalTransitionStyle.CoverVertical;
+        
+        self.presentViewController(mvc, animated: true, completion: nil);
+    }
 
+    @IBAction func serachButton(sender: AnyObject) {
+        let stvc : SearchTableViewController = self.storyboard?.instantiateViewControllerWithIdentifier( "stvc" ) as! SearchTableViewController;
+        
+        stvc.modalTransitionStyle = UIModalTransitionStyle.CoverVertical;
+        
+        self.presentViewController(stvc, animated: true, completion: nil);
+    }
+    
     func configureView() {
         // Update the user interface for the detail item.
         if let detail = self.detailItem {
