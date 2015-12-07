@@ -78,6 +78,9 @@ class MasterViewController: UITableViewController {
     
     
     func searchPassengersByRegex(array: [Passenger], nameRegex: String) -> [Passenger]{
+        if (nameRegex == "") {
+            return array;
+        }
         let result = array.filter({
             $0.name =~ nameRegex
         })
@@ -101,6 +104,9 @@ class MasterViewController: UITableViewController {
         return result;
     }
     func searchPassengersByGender(array: [Passenger], gender: String) -> [Passenger] {
+        if (gender == "all") {
+            return array;
+        }
         let result = array.filter({
             $0.sex == gender
         })

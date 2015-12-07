@@ -60,6 +60,7 @@ class SearchTableViewController: UITableViewController {
         self.newMinAge = Double (minAgeUISlider.value)
         self.newNameSearch = String! (nameUITextField.text)
         self.newGender = String! (genderUISegmentedControl.titleForSegmentAtIndex(genderUISegmentedControl.selectedSegmentIndex))
+        self.newGender = self.newGender.lowercaseString;
         //mvc.newMinAge = self.newMinAge
         //mvc.newMaxAge = self.newMaxAge
         //mvc.newCustomSearch = 1;
@@ -77,7 +78,7 @@ class SearchTableViewController: UITableViewController {
         mvc.updateMinAge( self.newMinAge );
         mvc.updateMaxAge( self.newMaxAge );
         mvc.updateNameSearch(self.newNameSearch)
-        mvc.updateGender(self.newGender.lowercaseString);
+        mvc.updateGender(self.newGender);
         print("GENDER")
         print(self.newGender)
         mvc.viewDidLoad();
