@@ -39,7 +39,23 @@ class DetailViewController: UIViewController {
             //self.configureView()
         }
     }
+    
+    @IBAction func masterButton(sender: AnyObject) {
+        let mvc : MasterViewController = self.storyboard?.instantiateViewControllerWithIdentifier( "mvc" ) as! MasterViewController;
+        
+        mvc.modalTransitionStyle = UIModalTransitionStyle.CoverVertical;
+        
+        self.presentViewController(mvc, animated: true, completion: nil);
+    }
 
+    @IBAction func serachButton(sender: AnyObject) {
+        let stvc : SearchTableViewController = self.storyboard?.instantiateViewControllerWithIdentifier( "stvc" ) as! SearchTableViewController;
+        
+        stvc.modalTransitionStyle = UIModalTransitionStyle.CoverVertical;
+        
+        self.presentViewController(stvc, animated: true, completion: nil);
+    }
+    
     func configureView() {
         // Update the user interface for the detail item.
         if let detail = self.detailItem {
@@ -47,21 +63,25 @@ class DetailViewController: UIViewController {
                 label.text = detail.description
             }
         }
-        self.title = passengers[row].name;
-        if (passengers[row].survived) {
-            self.survivedLabel.text = "Survived";
-        } else {
-            self.survivedLabel.text = "Died";
+        if row != nil {
+            self.title = passengers[row].name;
+            if (passengers[row].survived) {
+                self.survivedLabel.text = "Survived";
+            } else {
+                self.survivedLabel.text = "Died";
+            }
+            self.sexLabel.text = "Sex: \(passengers[row].sex)"
+            self.ageLabel.text = "Age: \(passengers[row].age)"
+            self.sibspLabel.text = "Sibblings/Spouse: \(passengers[row].sibsp)"
+            self.parchLabel.text = "Parents/Children: \(passengers[row].parch)"
+            self.classLabel.text = "Class: \(passengers[row].pclass)"
+            self.ticketLabel.text = "Ticket: \(passengers[row].ticket)"
+            self.fareLabel.text = "Fare: \(passengers[row].fare)"
+            self.cabinLabel.text = "Cabin: \(passengers[row].cabin)"
+            self.embarkedLabel.text = "Embarked From: \(passengers[row].embarked)"
+            
         }
-        self.sexLabel.text = "Sex: \(passengers[row].sex)"
-        self.ageLabel.text = "Age: \(passengers[row].age)"
-        self.sibspLabel.text = "Sibblings/Spouse: \(passengers[row].sibsp)"
-        self.parchLabel.text = "Parents/Children: \(passengers[row].parch)"
-        self.classLabel.text = "Class: \(passengers[row].pclass)"
-        self.ticketLabel.text = "Ticket: \(passengers[row].ticket)"
-        self.fareLabel.text = "Fare: \(passengers[row].fare)"
-        self.cabinLabel.text = "Cabin: \(passengers[row].cabin)"
-        self.embarkedLabel.text = "Embarked From: \(passengers[row].embarked)"
+        
     }
 
     override func viewDidLoad() {

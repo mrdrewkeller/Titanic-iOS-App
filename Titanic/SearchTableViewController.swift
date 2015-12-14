@@ -23,31 +23,73 @@ class SearchTableViewController: UITableViewController {
     @IBOutlet weak var maxAgeLabel: UILabel!
     @IBOutlet weak var minAgeLabel: UILabel!
     
+    
+    var customSearch : Int = 0;
+    var newMinAge : Double = 1.0;
+    var newMaxAge : Double = 1.0;
+    var newNameSearch : String! = "";
+    var newGender : String! = "";
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        //self.clearsSelectionOnViewWillAppear = false
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
+        nameUITextField.text = "";
+        
         maxAgeUISlider.maximumValue = 100;
         maxAgeUISlider.minimumValue = 1;
-        maxAgeUISlider.value = 100;
+        maxAgeUISlider.value = 100.0;
         
         minAgeUISlider.maximumValue = 99;
         minAgeUISlider.minimumValue = 0;
-        minAgeUISlider.value = 0;
+        minAgeUISlider.value = 0.0;
         
         maxAgeLabel.text = "Maximum Age: 100";
         minAgeLabel.text = "Minimum Age: 0";
     }
     
     @IBAction func searchAction(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil );
+        //let mvc = MasterViewController();
+        //print ("INSIDE SEARCH ACTION")
+        self.newMaxAge = Double (maxAgeUISlider.value)
+        self.newMinAge = Double (minAgeUISlider.value)
+        self.newNameSearch = String! (nameUITextField.text)
+        self.newGender = String! (genderUISegmentedControl.titleForSegmentAtIndex(genderUISegmentedControl.selectedSegmentIndex))
+        self.newGender = self.newGender.lowercaseString;
+        //mvc.newMinAge = self.newMinAge
+        //mvc.newMaxAge = self.newMaxAge
+        //mvc.newCustomSearch = 1;
+        //mvc.nameSearch = nameUITextField.text!;
+        //mvc.updateValue(self.newMinAge)
+        //print ("MVC NEW MIN AGE")
+        //print (mvc.newMinAge)
+        //print ("MVC NEW MAX AGE")
+        //print (mvc.newMaxAge)
+        //mvc.viewDidLoad();
+        //self.dismissViewControllerAnimated(true, completion: nil );
+        
+        let mvc : MasterViewController = self.storyboard?.instantiateViewControllerWithIdentifier( "mvc" ) as! MasterViewController;
+        let appd = AppDelegate()
+        
+        mvc.updateMinAge( self.newMinAge );
+        mvc.updateMaxAge( self.newMaxAge );
+        mvc.updateNameSearch(self.newNameSearch)
+        mvc.updateGender(self.newGender);
+        print("GENDER")
+        print(self.newGender)
+        mvc.viewDidLoad();
+        
+        mvc.modalTransitionStyle = UIModalTransitionStyle.CoverVertical;
+        
+        self.presentViewController(mvc, animated: true, completion: nil);
         
     }
+    
     
     @IBAction func maxAgeChanged(sender: AnyObject) {
         // round to nearest whole number

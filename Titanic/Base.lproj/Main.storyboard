@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="H1p-Uh-vWS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="H1p-Uh-vWS">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--Master-->
@@ -35,7 +36,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Survived" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bmw-1x-IQi">
-                                <rect key="frame" x="20" y="72" width="560" height="21"/>
+                                <rect key="frame" x="20" y="129" width="560" height="21"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Bmw-1x-IQi" secondAttribute="height" multiplier="80:3" id="7jM-UI-GbC"/>
@@ -45,7 +46,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Personal Information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H51-uu-xRg">
-                                <rect key="frame" x="20" y="106" width="560" height="21"/>
+                                <rect key="frame" x="20" y="163" width="560" height="21"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="H51-uu-xRg" secondAttribute="height" multiplier="80:3" id="PbS-Xc-tTG"/>
@@ -55,7 +56,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Embarked From:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdK-fO-Gfh">
-                                <rect key="frame" x="20" y="483" width="560" height="22"/>
+                                <rect key="frame" x="20" y="540" width="560" height="22"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="hdK-fO-Gfh" secondAttribute="height" multiplier="280:11" id="Q1t-7c-C3b"/>
@@ -65,7 +66,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Sex:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CKl-sE-iZ1">
-                                <rect key="frame" x="20" y="161" width="560" height="24"/>
+                                <rect key="frame" x="20" y="218" width="560" height="24"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="CKl-sE-iZ1" secondAttribute="height" multiplier="80:3" id="uCq-Hy-bz9"/>
@@ -75,7 +76,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Age:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o92-vQ-u9j">
-                                <rect key="frame" x="20" y="198" width="560" height="25"/>
+                                <rect key="frame" x="20" y="255" width="560" height="25"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="o92-vQ-u9j" secondAttribute="height" multiplier="80:3" id="TNd-El-N1K"/>
@@ -86,7 +87,7 @@
                                 <size key="shadowOffset" width="0.0" height="-2"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Sibblings/Spouse:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Wv-4E-xlY">
-                                <rect key="frame" x="20" y="231" width="560" height="26"/>
+                                <rect key="frame" x="20" y="288" width="560" height="26"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="0Wv-4E-xlY" secondAttribute="height" multiplier="80:3" id="4Up-1U-RlD"/>
@@ -96,7 +97,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Parents/Children:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xbi-4D-P8z">
-                                <rect key="frame" x="20" y="265" width="560" height="25"/>
+                                <rect key="frame" x="20" y="322" width="560" height="25"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Xbi-4D-P8z" secondAttribute="height" multiplier="80:3" id="Ap5-h1-Z8L"/>
@@ -106,7 +107,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Class:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W4U-RQ-n6Z">
-                                <rect key="frame" x="20" y="353" width="560" height="26"/>
+                                <rect key="frame" x="20" y="410" width="560" height="26"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="W4U-RQ-n6Z" secondAttribute="height" multiplier="280:11" id="m2q-Wo-Qmc"/>
@@ -116,7 +117,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Ticket#:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ho5-iV-Ljy">
-                                <rect key="frame" x="20" y="387" width="560" height="24"/>
+                                <rect key="frame" x="20" y="444" width="560" height="24"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ho5-iV-Ljy" secondAttribute="height" multiplier="280:11" id="Htb-Pf-48j"/>
@@ -126,7 +127,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Fare:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RwO-cf-tUv">
-                                <rect key="frame" x="20" y="419" width="560" height="24"/>
+                                <rect key="frame" x="20" y="476" width="560" height="24"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="RwO-cf-tUv" secondAttribute="height" multiplier="280:11" id="S81-Lf-gjW"/>
@@ -136,7 +137,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Cabin:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABy-jM-cbq">
-                                <rect key="frame" x="20" y="451" width="560" height="24"/>
+                                <rect key="frame" x="20" y="508" width="560" height="24"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ABy-jM-cbq" secondAttribute="height" multiplier="280:11" id="RA7-8h-rnn"/>
@@ -146,7 +147,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Ticket Details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lTm-hM-ZYC">
-                                <rect key="frame" x="20" y="315" width="560" height="24"/>
+                                <rect key="frame" x="20" y="372" width="560" height="24"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="lTm-hM-ZYC" secondAttribute="height" multiplier="70:3" id="PsI-bf-77k"/>
@@ -217,7 +218,32 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Titanic Passenger" id="mOI-FS-AaM"/>
+                    <navigationItem key="navigationItem" title="Titanic Passenger" id="mOI-FS-AaM">
+                        <rightBarButtonItems>
+                            <barButtonItem style="plain" id="cno-tw-Ibc">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="GTo-ju-ehJ">
+                                    <rect key="frame" x="508" y="7" width="72" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <state key="normal" title="Search"/>
+                                    <connections>
+                                        <action selector="serachButton:" destination="JEX-9P-axG" eventType="touchUpInside" id="9pj-7K-TzX"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                            <barButtonItem style="plain" id="KPK-cE-Vou">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="x5d-DI-PZH">
+                                    <rect key="frame" x="390" y="7" width="110" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <state key="normal" title="Back"/>
+                                    <connections>
+                                        <action selector="masterButton:" destination="JEX-9P-axG" eventType="touchUpInside" id="8pG-6U-Tay"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <connections>
                         <outlet property="ageLabel" destination="o92-vQ-u9j" id="2HL-El-qFD"/>
                         <outlet property="cabinLabel" destination="ABy-jM-cbq" id="8J9-9n-Cub"/>
@@ -238,7 +264,7 @@
         <!--Search Table View Controller-->
         <scene sceneID="z5k-0h-f0l">
             <objects>
-                <tableViewController storyboardIdentifier="stvc" id="oFT-hp-Y5x" customClass="SearchTableViewController" customModule="Titanic" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="stvc" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oFT-hp-Y5x" customClass="SearchTableViewController" customModule="Titanic" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleAspectFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="osV-HL-Ebf">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -491,7 +517,7 @@
         <!--Master-->
         <scene sceneID="smW-Zh-WAh">
             <objects>
-                <tableViewController storyboardIdentifier="mvc" title="Master" clearsSelectionOnViewWillAppear="NO" id="7bK-jq-Zjz" customClass="MasterViewController" customModule="Titanic" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="mvc" title="Master" useStoryboardIdentifierAsRestorationIdentifier="YES" clearsSelectionOnViewWillAppear="NO" id="7bK-jq-Zjz" customClass="MasterViewController" customModule="Titanic" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="r7i-6Z-zg0">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -529,18 +555,9 @@
                             <outlet property="delegate" destination="7bK-jq-Zjz" id="RA6-mI-bju"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Titanic" id="Zdf-7t-Un8">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="Xrv-hY-ZCG">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="AKb-Vf-W9R">
-                                <rect key="frame" x="447" y="7" width="133" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Search"/>
-                                <connections>
-                                    <action selector="goSearch:" destination="7bK-jq-Zjz" eventType="touchUpInside" id="BtV-bl-02q"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Titanic" id="Zdf-7t-Un8"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
             </objects>
